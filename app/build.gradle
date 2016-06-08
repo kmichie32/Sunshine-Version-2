@@ -18,7 +18,12 @@ android {
         }
     }
     buildTypes.each {
-        it.buildConfigField 'String', 'OPEN_WEATHER_MAP_API_KEY', MyOpenWeatherMapApiKey
+        it.buildConfigField 'String', 'OPEN_WEATHER_MAP_API_KEY', MyOpenWeatherMapApiKey 
+        // Replace MyOpenWeatherMapApiKey with your API Key.
+        // Be sure to have your API have this simliar syntax
+        // "\"48e2c74f6931202a0235de610afe9c8b\""
+        // You will need to escape character the quotes or
+        // you will have build errors.
     }
 }
 
